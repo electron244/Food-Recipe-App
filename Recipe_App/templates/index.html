@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Recipe App</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <section id="left">
+      <h1 id="heading">Food Recipe</h1>
+      <form action="/" method="POST" class="form">
+        {% csrf_token %}
+        <input type="text" placeholder="Enter Title" name="title" required/>
+        <textarea name="text" id="" placeholder="Enter Recipe Here" required></textarea>
+        <button id="btn" type="submit">Add Recipe</button>
+      </form>
+    </section>
+    <section id="right">
+      {% for i in data %}
+      <div class="box">
+        <div class="header">
+          <h1>{{i.title}}</h1>
+          <a href="delete-recipe/{{i.id}}"><button class="delete" id="{{i.id}}">Delete</button></a>
+        </div>
+          <p class="text">{{i.text}}</p>
+      </div>
+      {% endfor %}
+    </section>
+  </body>
+</html>

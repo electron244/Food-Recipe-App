@@ -1,0 +1,99 @@
+# Byte-compiled / cached files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+myvenv/
+
+
+# Django / Python environment
+*.env
+*.log
+settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Static and media files
+/static/
+/media/
+/staticfiles/
+/mediafiles/
+
+# Secret keys & credentials
+*.pem
+*.key
+
+# Ignore migrations cache
+**/migrations/__pycache__/
+
+# VS Code and JetBrains (PyCharm) IDE settings
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Mac OS files
+.DS_Store
+
+# Linux files
+*.swp
+*.swo
+
+# Windows files
+Thumbs.db
+
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+
+# Django specific files
+db.sqlite3
+db.sqlite3-journal
+*.log
+local_settings.py
+.env
+config/settings/local.py  # If using different settings for production & local
+
+# Static and media files
+/static/
+/media/
+/staticfiles/
+/mediafiles/
+
+# Migrations cache
+**/migrations/__pycache__/
+
+# IDE-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Node.js (if using npm for frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover
+coverage.xml
+
+# Testing & Build
+.pytest_cache/
+__pycache__/
+dist/
+build/
