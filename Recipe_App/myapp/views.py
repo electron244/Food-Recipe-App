@@ -19,4 +19,13 @@ def delete(request,id):
     data = Recipe.objects.get(id = id)
     data.delete()
     return redirect('/')
+
+
+def update(request,id):
+    if request.method =="POST":
+        update = Recipe.objects.get(id=id)
+        title = request.POST.get("title")
+        text = request.POST.get("text")
+        print(update,title,text)
+    return render(request,'update.html',{"update":update})
     

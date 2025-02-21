@@ -12,8 +12,13 @@
       <h1 id="heading">Food Recipe</h1>
       <form action="/" method="POST" class="form">
         {% csrf_token %}
-        <input type="text" placeholder="Enter Title" name="title" required/>
-        <textarea name="text" id="" placeholder="Enter Recipe Here" required></textarea>
+        <input type="text" placeholder="Enter Title" name="title" required />
+        <textarea
+          name="text"
+          id=""
+          placeholder="Enter Recipe Here"
+          required
+        ></textarea>
         <button id="btn" type="submit">Add Recipe</button>
       </form>
     </section>
@@ -22,9 +27,14 @@
       <div class="box">
         <div class="header">
           <h1>{{i.title}}</h1>
-          <a href="delete-recipe/{{i.id}}"><button class="delete" id="{{i.id}}">Delete</button></a>
+          <div class="buttons">
+            <a href="delete-recipe/{{i.id}}"
+              ><button class="delete" id="{{i.id}}">Delete</button></a>
+            <a href="update/{{i.id}}"
+              ><button class="update">Edit</button></a>
+          </div>
         </div>
-          <p class="text">{{i.text}}</p>
+        <p class="text">{{i.text}}</p>
       </div>
       {% endfor %}
     </section>

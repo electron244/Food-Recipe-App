@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/update.css'%}">
+</head>
+<body>
+    <section id="left">
+        <h1 id="heading">Edit Recipe</h1>
+        <form action="/" method="POST" class="form">
+          {% csrf_token %}
+          <input type="text" placeholder="Enter Title" name="title" required value="{{update.title}}" />
+          <textarea
+            name="text"
+            id=""
+            placeholder="Enter Recipe Here"
+            required
+          >{{update.text}}</textarea>
+          <button id="btn" type="submit">Update Recipe</button>
+        </form>
+      </section>
+</body>
+</html>
