@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from .models import *
 from django.http import HttpResponse
 
@@ -7,8 +7,6 @@ def index(request):
     if request.method =="POST":
         title = request.POST.get("title")
         text = request.POST.get("text")
-        print(f"This is Title {title}")
-        print(f"This is Text {text}")
         Recipe.objects.create(title=title,text=text)
         return redirect("/")
     
@@ -22,10 +20,17 @@ def delete(request,id):
 
 
 def update(request,id):
-    if request.method =="POST":
-        update = Recipe.objects.get(id=id)
-        title = request.POST.get("title")
-        text = request.POST.get("text")
-        print(update,title,text)
-    return render(request,'update.html',{"update":update})
-    
+    recipe = Recipe.objects.get(id=id)
+    if request.method == "POST":
+        Recipe.objects.filter(id=id).update(title=request.POST.get("title"),text=request.POST.get("text"))
+        return redirect('/')
+        # title = request.POST.get("title")
+        # text = request.POST.get("text")
+        # recipe.title = title
+        # recipe.text = text
+        # recipe.save()
+        # return redirect('/')
+
+    context = {"recipe":recipe}
+    return render(request,'update.html',context)
+
