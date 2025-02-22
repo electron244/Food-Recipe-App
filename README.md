@@ -1,35 +1,40 @@
 # 🍽️ Recipe App
 
-A simple Django-based Recipe App that allows users to add recipes with a title and description. Users can also delete recipes from the list. 📝
+A simple Django-based Recipe App that allows users to add, update, and delete recipes with a title and description. Users can manage their recipes easily through a user-friendly interface. 📝
 
 ## ✨ Features
--➕ Add recipes with a title and description
--📝 Update recipes with new details
--📦 Store recipes in an SQLite database
--🗑️ Delete recipes with a single click
--🖥️ Simple and user-friendly interface
+- ➕ **Add** recipes with a title and description
+- 📝 **Update** existing recipes with new details
+- 📦 **Store** recipes in an SQLite database
+- 🗑️ **Delete** recipes with a single click
+- 🖥️ Simple and user-friendly interface
 
 ## 🔧 Installation
 
-### 1. 📥 Clone the Repository
+### 1. 💅 Clone the Repository
 ```sh
 git clone https://github.com/electron244/Food-Recipe-App.git
 cd Food-Recipe-App
 ```
 
-### 2. 🏗️ Create a Virtual Environment
+### 2. 🏰 Create a Virtual Environment
 ```sh
 python -m venv venv
 source venv/bin/activate   # On macOS/Linux
 venv\Scripts\activate     # On Windows
 ```
 
-### 3. 🔄 Apply Migrations
+### 3. 📊 Install Dependencies
+```sh
+pip install -r requirements.txt
+```
+
+### 4. 🔄 Apply Migrations
 ```sh
 python manage.py migrate
 ```
 
-### 4. 🚀 Run the Server
+### 5. 🚀 Run the Server
 ```sh
 python manage.py runserver
 ```
@@ -38,9 +43,10 @@ python manage.py runserver
 1. Open `http://127.0.0.1:8000/` in your browser.
 2. Enter a recipe title and description, then click the **➕ Add Recipe** button.
 3. Your recipe will be saved and displayed on the page.
-4. Click the **🗑️ Delete** button next to a recipe to remove it.
+4. Click the **📝 Edit** button next to a recipe to update its details.
+5. Click the **🗑️ Delete** button to remove a recipe.
 
-## 🗄️ Database
+## 🗂️ Database
 The project uses an SQLite database by default, but you can change it in `settings.py`:
 ```python
 DATABASES = {
@@ -69,7 +75,7 @@ recipe-app/
 
 ## 📌 Requirements
 - 🐍 Python 3.8+
-- 🎯 Django 4.0+
+- 🎡 Django 4.0+
 
 ## 🤝 Contributing
 Feel free to fork this repository and make improvements. You can submit a pull request with your changes.
