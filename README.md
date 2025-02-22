@@ -3,11 +3,11 @@
 A simple Django-based Recipe App that allows users to add recipes with a title and description. Users can also delete recipes from the list. 📝
 
 ## ✨ Features
-➕ Add recipes with a title and description
-📝 Update recipes with new details
-📦 Store recipes in an SQLite database
-🗑️ Delete recipes with a single click
-🖥️ Simple and user-friendly interface
+-➕ Add recipes with a title and description
+-📝 Update recipes with new details
+-📦 Store recipes in an SQLite database
+-🗑️ Delete recipes with a single click
+-🖥️ Simple and user-friendly interface
 
 ## 🔧 Installation
 
