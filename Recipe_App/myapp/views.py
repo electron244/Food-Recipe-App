@@ -24,12 +24,6 @@ def update(request,id):
     if request.method == "POST":
         Recipe.objects.filter(id=id).update(title=request.POST.get("title"),text=request.POST.get("text"))
         return redirect('/')
-        # title = request.POST.get("title")
-        # text = request.POST.get("text")
-        # recipe.title = title
-        # recipe.text = text
-        # recipe.save()
-        # return redirect('/')
 
     context = {"recipe":recipe}
     return render(request,'update.html',context)
